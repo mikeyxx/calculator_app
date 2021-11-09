@@ -83,8 +83,8 @@ buttons.forEach((button) => {
 })
 
 function calculate(firstNumber, operator, secondNumber) {
-    firstNumber = parseInt(firstNumber)
-    secondNumber = parseInt(secondNumber)
+    firstNumber = parseFloat(firstNumber)
+    secondNumber = parseFloat(secondNumber)
 
     if(operator === 'plus') { return firstNumber + secondNumber }
     if(operator === 'minus') { return firstNumber - secondNumber }
