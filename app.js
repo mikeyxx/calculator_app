@@ -34,7 +34,7 @@ buttons.forEach((button) => {
         const previousKeyType = calculator.dataset.previousKeyType;
         //Is this a number key?
 //         if(type === 'number') {
-            if(displayValue === "0" || previousKeyType === 'operator') {
+            if(displayValue === "0") {
                 display.textContent = keyValue;
             } else {
                 display.textContent = displayValue + keyValue;
