@@ -47,13 +47,7 @@ buttons.forEach((button) => {
         //}        
 
         //Is this an operator key?
-        if(type === 'operator') {
-            if(displayValue === "0") {
-                display.textContent = keyValue;
-            } else {
-                display.textContent = displayValue + keyValue;
-            }
-            
+        if(type === 'operator') {            
             const currentActiveOperator = calculator.querySelector('[data-state="selected"]')
             if(currentActiveOperator) {
                 currentActiveOperator.dataset.state = "";
