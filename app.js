@@ -33,7 +33,7 @@ buttons.forEach((button) => {
         const type = key.dataset.type;
         const previousKeyType = calculator.dataset.previousKeyType;
         //Is this a number key?
-        if(type === 'number') {
+//         if(type === 'number') {
             if(displayValue === "0" || previousKeyType === 'operator') {
                 display.textContent = keyValue;
             } else {
@@ -44,7 +44,7 @@ buttons.forEach((button) => {
                 currentActiveOperator.dataset.state = "";
             }
 
-        }        
+        //}        
 
         //Is this an operator key?
         if(type === 'operator') {
