@@ -118,8 +118,7 @@ header h2 {
 }
 
 .toggle-container {
-  display: flex;
-  flex-direction: column;
+  display: block;
 }
 
 .toggle-class {
