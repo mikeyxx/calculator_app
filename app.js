@@ -34,7 +34,7 @@ keys.addEventListener('click', (e) => {
     const previousKeyType = calculator.dataset.previousKeyType
 
 if(type === 'number') {
-    if(displayValue === '0' || previousKeyType === 'operator') {
+    if(displayValue === '0' || previousKeyType === 'operator' || previousKeyType === 'equal') {
         display.textContent = keyValue
     } else {
         display.textContent = displayValue + keyValue
@@ -42,7 +42,6 @@ if(type === 'number') {
     const pressedOpKeys = keys.querySelectorAll('[data-type="operator"]')
     pressedOpKeys.forEach(el => { el.dataset.state = '' })
 }
-
 if(type === 'operator') { 
     //To temporarily remove the state/classList from the operator key that was pressed
     const pressedOpKeys = keys.querySelectorAll('[data-type="operator"]')
