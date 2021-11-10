@@ -117,6 +117,11 @@ header h2 {
   font-size: 13px;
 }
 
+.toggle-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .toggle-class {
   display: -webkit-box;
   display: -ms-flexbox;
