@@ -119,6 +119,7 @@ header h2 {
 
 .toggle-container {
   display: block;
+  margin: 0;
 }
 
 .toggle-class {
