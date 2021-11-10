@@ -68,7 +68,14 @@ if(type === 'equal') {
 }
 
 if(type === 'delete') {
-    display.textContent = displayValue.slice(0, -1)
+    if(displayValue !== 0 && displayValue.length > 1) {
+        display.textContent = displayValue.slice(0, -1)
+    } else if(displayValue.length === 1 && displayValue != 0) {
+        display.textContent = '0'
+        delete calculator.dataset.firstNumber
+        delete calculator.dataset.operator
+    }
+    
 }
 
 if(type === 'clear') {
