@@ -22,8 +22,9 @@ function changeTheme(e) {
     }
 }
 const calculator = document.querySelector('.calculator')
-const display = calculator.querySelector('.calc-display');
-const keys = calculator.querySelector('.calc-keys');
+const display = calculator.querySelector('.calc-display')
+const keys = calculator.querySelector('.calc-keys')
+const formatter = new Intl.NumberFormat('en')
 
 
 keys.addEventListener('click', (e) => {
@@ -37,7 +38,7 @@ if(type === 'number') {
     if(displayValue === '0' || previousKeyType === 'operator' || previousKeyType === 'equal') {
         display.textContent = keyValue
     } else {
-        display.textContent = displayValue + keyValue
+        display.textContent = formatter.format(displayValue + keyValue)
     }
     const pressedOpKeys = keys.querySelectorAll('[data-type="operator"]')
     pressedOpKeys.forEach(el => { el.dataset.state = '' })
@@ -62,7 +63,7 @@ if(type === 'equal') {
     const firstNumber = calculator.dataset.firstNumber
     const operator = calculator.dataset.operator
     const secondNumber = displayValue
-    display.textContent = calculate(firstNumber, operator, secondNumber)
+    display.textContent = formatter.format(calculate(firstNumber, operator, secondNumber))
     
 }
 
