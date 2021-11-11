@@ -38,7 +38,7 @@ if(type === 'number') {
     if(displayValue === '0' || previousKeyType === 'operator' || previousKeyType === 'equal') {
         display.textContent = keyValue
     } else {
-        display.textContent = formatter.format(displayValue + keyValue)
+        display.textContent = displayValue + keyValue
     }
     const pressedOpKeys = keys.querySelectorAll('[data-type="operator"]')
     pressedOpKeys.forEach(el => { el.dataset.state = '' })
@@ -63,7 +63,7 @@ if(type === 'equal') {
     const firstNumber = calculator.dataset.firstNumber
     const operator = calculator.dataset.operator
     const secondNumber = displayValue
-    display.textContent = formatter.format(calculate(firstNumber, operator, secondNumber))
+    display.textContent = calculate(firstNumber, operator, secondNumber)
     
 }
 
