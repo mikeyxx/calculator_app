@@ -57,6 +57,13 @@ if(type === 'operator') {
     //This adds something like a classList to the operator keys
     key.dataset.state = 'selected'
 }
+    
+if(type === 'decimal') {
+    display.textContent = displayValue + '.'
+    if(displayValue.includes('.')) {
+        display.textContent = displayValue
+    }
+}
 
 if(type === 'equal') {
     //perform a calculation
